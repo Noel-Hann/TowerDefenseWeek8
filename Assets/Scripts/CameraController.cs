@@ -15,10 +15,17 @@ public class CameraController : MonoBehaviour
     public float maximumY = 80;
 
     private bool doMovement = true;
+    
+    
 
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.gameIsOver)
+        {
+            this.enabled = false;
+            return;
+        }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
