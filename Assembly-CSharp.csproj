@@ -48,6 +48,8 @@
      <Compile Include="Assets/Scripts/Turret.cs" />
      <Compile Include="Assets/Scripts/Shop.cs" />
      <Compile Include="Assets/Scripts/Enemy.cs" />
+     <Compile Include="Assets/Scripts/NodeUI.cs" />
+     <Compile Include="Assets/Scripts/NewEnemyMotion.cs" />
      <Compile Include="Assets/Scripts/LivesUI.cs" />
      <Compile Include="Assets/Scripts/TurretBlueprint.cs" />
      <Compile Include="Assets/Scripts/Bullet.cs" />
@@ -61,7 +63,6 @@
      <Compile Include="Assets/Scripts/PlayerStats.cs" />
      <Compile Include="Assets/Scripts/MoneyUI.cs" />
      <Compile Include="Assets/Scripts/CameraController.cs" />
-     <Compile Include="Assets/NodeUI.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
@@ -79,6 +80,7 @@
      <Folder Include="Assets/Scripts" />
      <Folder Include="Assets/Animation" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
+     <Folder Include="Assets/Scenes/Main Scene" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
      <Folder Include="Assets/Imports" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
@@ -104,6 +106,7 @@
      <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
      <Folder Include="Assets/TextMesh Pro/Documentation" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
+     <Folder Include="Assets/Imports/Standard Turret/Materials_upgraded" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne.json" />
      <Folder Include="Assets/Prefabs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
@@ -734,6 +737,12 @@
      <Reference Include="Unity.EditorCoroutines.Editor">
      <HintPath>/Users/noelhann/CSUMB schoolwork/Spring 2023/CST 326 Spring/Class projects/TowerDefense/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.TerrainTools.Editor">
+     <HintPath>/Users/noelhann/CSUMB schoolwork/Spring 2023/CST 326 Spring/Class projects/TowerDefense/Library/ScriptAssemblies/Unity.TerrainTools.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.AI.Navigation">
+     <HintPath>/Users/noelhann/CSUMB schoolwork/Spring 2023/CST 326 Spring/Class projects/TowerDefense/Library/ScriptAssemblies/Unity.AI.Navigation.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
      <HintPath>/Users/noelhann/CSUMB schoolwork/Spring 2023/CST 326 Spring/Class projects/TowerDefense/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
@@ -764,6 +773,9 @@
      <Reference Include="Unity.Rider.Editor">
      <HintPath>/Users/noelhann/CSUMB schoolwork/Spring 2023/CST 326 Spring/Class projects/TowerDefense/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.TerrainTools">
+     <HintPath>/Users/noelhann/CSUMB schoolwork/Spring 2023/CST 326 Spring/Class projects/TowerDefense/Library/ScriptAssemblies/Unity.TerrainTools.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.Flow">
      <HintPath>/Users/noelhann/CSUMB schoolwork/Spring 2023/CST 326 Spring/Class projects/TowerDefense/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
@@ -791,6 +803,9 @@
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
      <HintPath>/Users/noelhann/CSUMB schoolwork/Spring 2023/CST 326 Spring/Class projects/TowerDefense/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.AI.Navigation.Updater">
+     <HintPath>/Users/noelhann/CSUMB schoolwork/Spring 2023/CST 326 Spring/Class projects/TowerDefense/Library/ScriptAssemblies/Unity.AI.Navigation.Updater.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
      <HintPath>/Users/noelhann/CSUMB schoolwork/Spring 2023/CST 326 Spring/Class projects/TowerDefense/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
      </Reference>
@@ -803,11 +818,17 @@
      <Reference Include="Unity.Services.Core.Analytics">
      <HintPath>/Users/noelhann/CSUMB schoolwork/Spring 2023/CST 326 Spring/Class projects/TowerDefense/Library/ScriptAssemblies/Unity.Services.Core.Analytics.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.AI.Navigation.Editor">
+     <HintPath>/Users/noelhann/CSUMB schoolwork/Spring 2023/CST 326 Spring/Class projects/TowerDefense/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>/Users/noelhann/CSUMB schoolwork/Spring 2023/CST 326 Spring/Class projects/TowerDefense/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>/Users/noelhann/CSUMB schoolwork/Spring 2023/CST 326 Spring/Class projects/TowerDefense/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+     <HintPath>/Users/noelhann/CSUMB schoolwork/Spring 2023/CST 326 Spring/Class projects/TowerDefense/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
